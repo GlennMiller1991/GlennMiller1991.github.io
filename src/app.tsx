@@ -1,9 +1,9 @@
 import React from 'react';
 // import {WindowWrapper} from './common/components/WindowWrapper/WindowWrapper'
 import {observer} from "mobx-react-lite";
-import {Routes} from "react-router-dom";
 // import {Portfolio} from "./pages/portfolio/portfolio";
 // import {Login} from "./pages/auth/Login/Login";
+import {Routes} from 'react-router-dom'
 import {app} from "./app/constants";
 import {Alert} from "./lib/ui/Alert/Alert";
 
