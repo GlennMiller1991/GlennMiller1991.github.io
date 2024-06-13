@@ -1,9 +1,9 @@
 {
-  "name": "fat_bass",
+  "name": "portfolio",
   "homepage": "https://GlennMiller1991.github.io",
   "version": "1.0.4",
   "private": false,
-  "description": "portfolio on custom webpack settings",
+  "description": "Alexandr Basalov portfolio",
   "scripts": {
     "start": "sh ./scripts/start.sh",
     "clean": "sh ./scripts/clean.sh",
