@@ -1,7 +1,10 @@
 {
     "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
         "sourceMap": true,
         "jsx": "react-jsx",
         "esModuleInterop": true,
+        "moduleResolution": "node",
     }
 }

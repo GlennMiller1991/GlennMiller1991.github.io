@@ -79,7 +79,7 @@ export class ConicGradient {
      * Для использования метода, углы  должны быть в Turn единицах измерения
      */
     toCanvas(ctx: CanvasRenderingContext2D, center: IPoint2) {
-        const gradient = ctx.createConicGradient(0, ...center)
+        const gradient = ctx.createConicGradient(0, ...center as [number, number])
         for (let color of this.colors) {
             gradient.addColorStop(color.angle, color.color.toCSS())
         }
