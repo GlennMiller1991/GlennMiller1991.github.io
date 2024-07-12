@@ -4,8 +4,10 @@
   "description": "portfolio on custom webpack settings",
   "scripts": {
     "test": "jest",
-    "prod": "webpack && git add ./dist/index.html && git add ./dist/index.js",
-    "dev": "webpack serve "
+    "prod": "webpack",
+    "dev": "webpack serve",
+    "predeploy": "npm run prod",
+    "deploy": "gh-pages -d build"
   },
   "author": "fat_bass",
   "devDependencies": {
@@ -14,6 +16,7 @@
     "@babel/preset-react": "^7.24.7",
     "babel-loader": "^9.1.3",
     "dotenv-webpack": "^8.1.0",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "^5.6.0",
     "typescript": "^5.5.3",
     "webpack": "^5.93.0",
