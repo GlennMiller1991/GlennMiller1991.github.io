@@ -1,4 +1,6 @@
-export const App = () => {
+import React from "react";
+
+export const App: React.FC = () => {
     return (
         <div>
             Hello react component
