@@ -7,7 +7,7 @@
     "prod": "webpack",
     "dev": "webpack serve",
     "predeploy": "npm run prod",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "author": "fat_bass",
   "devDependencies": {
