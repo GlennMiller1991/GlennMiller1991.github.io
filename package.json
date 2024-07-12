@@ -4,7 +4,7 @@
   "description": "portfolio on custom webpack settings",
   "scripts": {
     "test": "jest",
-    "prod": "webpack ",
+    "prod": "webpack && git add ./dist/index.html && git add ./dist/index.js",
     "dev": "webpack serve "
   },
   "author": "fat_bass",
