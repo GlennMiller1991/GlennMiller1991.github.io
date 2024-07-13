@@ -9,9 +9,9 @@
     "clean": "sh ./scripts/clean.sh",
     "bootstrap": "npm run start && npm install",
     "test": "jest",
-    "prod": "npm run clean && npm run bootstrap && webpack",
+    "prod": "webpack",
     "dev": "npm run start && webpack serve",
-    "predeploy": "npm run clean && npm run bootstrap && npm run test && webpack serve",
+    "predeploy": "sh ./scripts/predeploy.sh",
     "deploy": "gh-pages -d dist"
   },
   "author": "fat_bass",
