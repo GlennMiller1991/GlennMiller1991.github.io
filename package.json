@@ -1,7 +1,7 @@
 {
   "name": "fat_bass",
   "homepage": "https://GlennMiller1991.github.io/fat_bass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "portfolio on custom webpack settings",
   "scripts": {
