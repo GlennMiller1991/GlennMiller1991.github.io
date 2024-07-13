@@ -1,8 +1,9 @@
 import React from "react";
+import {classes} from "./app/constants";
 
 export const App: React.FC = () => {
     return (
-        <div className={'flexCenter abs'}>
+        <div className={`${classes.flexCenter} ${classes.abs}`}>
             <div>
                 Hello react component
             </div>
