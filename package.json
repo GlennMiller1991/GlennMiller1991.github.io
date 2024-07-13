@@ -1,6 +1,6 @@
 {
   "name": "fat_bass",
-  "homepage": "https://GlennMiller1991.github.io/fat_bass",
+  "homepage": "https://GlennMiller1991.github.io",
   "version": "1.0.4",
   "private": false,
   "description": "portfolio on custom webpack settings",
@@ -14,7 +14,7 @@
     "predeploy": "npm run clean && npm run bootstrap && npm run test && npm run prod",
     "deploy": "gh-pages -d dist"
   },
-  "author": "fat_bass",
+  "author": "Alexandr Basalov",
   "devDependencies": {
     "@babel/core": "^7.24.8",
     "@babel/preset-env": "^7.24.8",
