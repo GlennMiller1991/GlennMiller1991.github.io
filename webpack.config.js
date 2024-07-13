@@ -11,7 +11,7 @@ module.exports = {
         new Dotenv({path: './static/.env'})
     ],
     resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.css'],
     },
     output: {
         filename: 'index.js',
@@ -26,6 +26,11 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: ['style-loader', 'css-loader'],
+            },
             {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,

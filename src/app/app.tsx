@@ -2,8 +2,10 @@ import React from "react";
 
 export const App: React.FC = () => {
     return (
-        <div>
-            Hello react component
+        <div className={'flexCenter abs'}>
+            <div>
+                Hello react component
+            </div>
         </div>
     )
 }
