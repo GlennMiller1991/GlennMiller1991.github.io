@@ -11,7 +11,7 @@
     "test": "jest",
     "prod": "npm run clean && npm run bootstrap && webpack",
     "dev": "npm run start && webpack serve",
-    "predeploy": "npm run prod",
+    "predeploy": "npm run clean && npm run bootstrap && npm run test && webpack serve",
     "deploy": "gh-pages -d dist"
   },
   "author": "fat_bass",
@@ -31,6 +31,7 @@
     "style-loader": "^4.0.0",
     "ts-jest": "^29.2.2",
     "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.3",
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4",
