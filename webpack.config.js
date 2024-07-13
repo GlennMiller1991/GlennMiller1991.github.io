@@ -7,7 +7,10 @@ module.exports = {
     entry: './src/index.tsx',
     devtool: 'inline-source-map',
     plugins: [
-        new HtmlWebpackPlugin({template: './static/index.html'}),
+        new HtmlWebpackPlugin({
+            template: './static/index.html',
+            inject: 'head',
+        }),
         new Dotenv({path: './static/.env'})
     ],
     resolve: {
@@ -30,7 +33,12 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 use: [
-                    'style-loader',
+                    {
+                        loader: 'style-loader',
+                        options: {
+                            injectType: 'styleTag'
+                        }
+                    },
                     {
                         loader: 'css-loader',
                         options: {
