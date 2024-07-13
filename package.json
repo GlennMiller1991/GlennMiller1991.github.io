@@ -11,7 +11,7 @@
     "test": "jest",
     "prod": "webpack",
     "dev": "npm run start && webpack serve",
-    "predeploy": "sh ./scripts/predeploy.sh",
+    "predeploy": "npm run clean && npm run bootstrap && npm run test && npm run prod",
     "deploy": "gh-pages -d dist"
   },
   "author": "fat_bass",
