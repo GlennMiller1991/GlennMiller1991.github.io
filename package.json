@@ -5,12 +5,12 @@
   "private": false,
   "description": "portfolio on custom webpack settings",
   "scripts": {
-    "start": "nvm use 20.15.0",
-    "clean": "for dir in node_modules dist; do if [ -d $dir ]; then rm -r -f $dir; fi; done",
+    "start": "sh ./scripts/start.sh",
+    "clean": "sh ./scripts/clean.sh",
     "bootstrap": "npm run start & npm run clean && npm install",
     "test": "jest",
     "prod": "npm run bootstrap && webpack",
-    "dev": "npm run bootstrap && webpack serve",
+    "dev": "webpack serve",
     "predeploy": "npm run prod",
     "deploy": "gh-pages -d dist"
   },
