@@ -7,11 +7,15 @@ type IEnvConfig = {
 	port: string,
 }
 
+function isProduction(mode: IEnvConfig['mode']) {
+	return mode === 'production'
+}
+
+
 module.exports = (env: IEnvConfig) => {
 	env.mode = env.mode || 'development'
 	env.port = env.port || '3000'
 
-	console.log(typeof env.port)
 	return {
 		mode: env.mode,
 		entry: "./src/index.tsx",
