@@ -28,6 +28,9 @@ export default (env: IEnvConfig) => {
 			new Dotenv({ path: "./static/.env" }),
 		],
 		resolve: {
+			alias: {
+				"@": path.resolve(__dirname, "src")
+			},
 			extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss", ".module.css", ".module.scss"],
 		},
 		output: {

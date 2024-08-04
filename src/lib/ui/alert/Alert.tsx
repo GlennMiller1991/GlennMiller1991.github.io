@@ -1,14 +1,14 @@
-import React, {useEffect} from 'react'
-import * as styles from './Alert.module.scss'
-import {app, classes, cn} from "../../../app/constants";
+import React, { useEffect } from 'react'
+import styles from './Alert.module.scss'
+import { app, classes, cn } from "@/app/constants";
 
 
 type IAlert = {
     children: string
 }
 export const Alert: React.FC<IAlert> = React.memo(({
-                                                       children,
-                                                   }) => {
+    children,
+}) => {
 
 
     useEffect(() => {
