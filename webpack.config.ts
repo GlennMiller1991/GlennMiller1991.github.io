@@ -1,6 +1,6 @@
-const path = require("path")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const Dotenv = require("dotenv-webpack")
+import path from 'path';
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import Dotenv from "dotenv-webpack";
 
 type IEnvConfig = {
 	mode: 'production' | 'development',
@@ -12,7 +12,7 @@ function isProduction(mode: IEnvConfig['mode']) {
 }
 
 
-module.exports = (env: IEnvConfig) => {
+export default (env: IEnvConfig) => {
 	env.mode = env.mode || 'development'
 	env.port = env.port || '3000'
 

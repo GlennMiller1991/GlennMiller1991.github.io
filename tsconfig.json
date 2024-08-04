@@ -6,5 +6,11 @@
         "jsx": "react-jsx",
         "esModuleInterop": true,
         "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
     }
 }
