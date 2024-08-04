@@ -1,10 +1,10 @@
 import React, {useEffect, useRef, useState} from "react";
-import * as styles from "../window-wrapper.module.scss"
+import styles from "../window-wrapper.module.scss"
 import {ParticlesController} from "./controller";
-import {app} from "../../../../app/constants";
+import {app} from "@/app/constants";
 
 export const DistortedBackground: React.FC = React.memo(() => {
-    const [controller] = useState(() => new ParticlesController(app))
+    const [controller] = useState(() => new ParticlesController(app.isMobile))
     const canvasRef = useRef<HTMLCanvasElement>(null)
 
 

@@ -25,7 +25,7 @@ export class AppController {
         return `${this.server}/api/v1`
     }
 
-    isMobile = window.ontouchstart || window.navigator.userAgent.toLowerCase().includes('mobi')
+    isMobile = !!(window.ontouchstart || window.navigator.userAgent.toLowerCase().includes('mobi'))
     isServerAvailable = false
     resizeObserver: ResizeObserver | undefined
     appDomRect = document.body.getBoundingClientRect()

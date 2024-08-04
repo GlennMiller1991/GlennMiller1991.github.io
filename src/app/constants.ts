@@ -1,4 +1,4 @@
-import * as c from '../index.module.css'
+import c from '../index.module.css'
 import classNames from "classnames";
 import {AppController} from "./infra/app.controller";
 

@@ -38,7 +38,7 @@ export class ParticlesController {
     particles: Particle[] = []
     timeoutId?: number
 
-    constructor(private appController: AppController) {
+    constructor(private isMobile: boolean = false) {
 
     }
 
@@ -49,7 +49,7 @@ export class ParticlesController {
         this.canvas.width = rect.width
         this.canvas.height = rect.height
 
-        if (this.appController.isMobile) {
+        if (this.isMobile) {
             this.timeoutId = this.mobileListener() as unknown as number
         } else {
             this.canvas.addEventListener('mousemove', this.onMouseMove)

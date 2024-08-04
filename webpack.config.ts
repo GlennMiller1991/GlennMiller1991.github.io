@@ -1,26 +1,60 @@
 import path from 'path';
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import Dotenv from "dotenv-webpack";
-
-type IEnvConfig = {
-	mode: 'production' | 'development',
-	port: string,
-}
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 function isProduction(mode: IEnvConfig['mode']) {
 	return mode === 'production'
 }
 
 
+export function getStyleLoader(env: IEnvConfig) {
+	if (isProduction(env.mode)) {
+		return {
+			loader: MiniCssExtractPlugin.loader,
+			options: {
+				defaultExport: true,
+			}
+		}
+	}
+	return {
+		loader: 'style-loader'
+	}
+}
+
+export function getCssLoader(env: IEnvConfig) {
+	return {
+		loader: "css-loader",
+		options: {
+			importLoaders: 2,
+			modules: true,
+		},
+	}
+}
+
+export function getSassLoader(env: IEnvConfig) {
+	return {
+		loader: "sass-loader"
+	}
+}
+
+type IEnvConfig = {
+	mode: 'production' | 'development',
+	port: string,
+}
+
+
 export default (env: IEnvConfig) => {
 	env.mode = env.mode || 'development'
 	env.port = env.port || '3000'
+	const isProd = isProduction(env.mode)
 
 	return {
 		mode: env.mode,
 		entry: "./src/index.tsx",
 		devtool: "inline-source-map",
 		plugins: [
+			new MiniCssExtractPlugin(),
 			new HtmlWebpackPlugin({
 				template: "./static/index.html",
 				inject: "head",
@@ -51,22 +85,9 @@ export default (env: IEnvConfig) => {
 					test: /\.s?css$/,
 					exclude: /node_modules/,
 					use: [
-						{
-							loader: "style-loader",
-							options: {
-								injectType: "styleTag",
-							},
-						},
-						{
-							loader: "css-loader",
-							options: {
-								importLoaders: 2,
-								modules: true,
-							},
-						},
-						{
-							loader: "sass-loader",
-						},
+						getStyleLoader(env),
+						getCssLoader(env),
+						getSassLoader(env),
 					],
 				},
 				{

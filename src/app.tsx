@@ -4,8 +4,7 @@ import { observer } from "mobx-react-lite";
 // import {Login} from "./pages/auth/Login/Login";
 import { Routes, Route } from 'react-router-dom'
 import { app } from "@/app/constants";
-import { Alert } from "@/lib/ui/alert/Alert";
-import { WindowWrapper } from '@/lib/ui/window-wrapper/window-wrapper';
+import { Alert, WindowWrapper } from "@/lib/ui";
 
 export const App = observer(() => {
 

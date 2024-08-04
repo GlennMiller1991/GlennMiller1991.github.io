@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
-import styles from './Alert.module.scss'
 import { app, classes, cn } from "@/app/constants";
-
+import styles from './Alert.module.scss'
 
 type IAlert = {
     children: string
