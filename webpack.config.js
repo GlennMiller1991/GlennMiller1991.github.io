@@ -2,8 +2,8 @@ const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const Dotenv = require("dotenv-webpack")
 
-module.exports = {
-	mode: "development",
+module.exports = (env) => ({
+	mode: env.mode,
 	entry: "./src/index.tsx",
 	devtool: "inline-source-map",
 	plugins: [
@@ -69,4 +69,4 @@ module.exports = {
 			},
 		],
 	},
-}
+})

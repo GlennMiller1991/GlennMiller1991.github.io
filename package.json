@@ -9,8 +9,8 @@
     "clean": "sh ./scripts/clean.sh",
     "bootstrap": "npm run start && npm install",
     "test": "jest",
-    "prod": "webpack",
-    "dev": "npm run start && webpack serve",
+    "prod": "webpack --env mode=production",
+    "dev": "npm run start && webpack serve --env mode=development",
     "predeploy": "npm run clean && npm run bootstrap && npm run test && npm run prod",
     "deploy": "gh-pages -d dist"
   },
