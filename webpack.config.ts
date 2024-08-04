@@ -2,7 +2,11 @@ const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const Dotenv = require("dotenv-webpack")
 
-module.exports = (env) => ({
+type IEnvConfig = {
+	mode: 'production' | 'development'
+}
+
+module.exports = (env: IEnvConfig) => ({
 	mode: env.mode,
 	entry: "./src/index.tsx",
 	devtool: "inline-source-map",
