@@ -1,0 +1,25 @@
+.submitBtn, .submitBtn:focus {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 1rem;
+  background: transparent;
+  border: 1px solid var(--color-theme);
+  color: var(--color-theme);
+  font-family: "Roboto Mono", monospace;
+  transition: 0.8s;
+
+  &:hover {
+    color: var(--color-light-primary);
+    background-color: var(--color-theme);
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: .5;
+
+    &:hover {
+      background: transparent;
+      color: var(--color-theme);
+    }
+  }
+}
